@@ -1,0 +1,9 @@
+/config
+jest.config.js
+jest.setup.js
+/build
+/.next
+/node_modules
+/out
+/public
+/scripts
