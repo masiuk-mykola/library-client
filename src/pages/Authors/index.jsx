@@ -1,12 +1,21 @@
-import PropTypes from "prop-types";
-import React from "react";
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-import PageTitle from "@components/PageTitle/PageTitle";
+import PageTitle from '@components/PageTitle/PageTitle';
+import { useQuery } from '@tanstack/react-query';
+import { apiUrls } from '@constants/apiUrls';
+import { authorsService } from '@services/authors';
 
 const Authors = ({ title }) => {
   const { t } = useTranslation();
+
+  const { data, isLoading, refetch } = useQuery({
+    queryKey: [apiUrls.author.getAuthors],
+    queryFn: () => authorsService.getAuthors()
+  });
+
   return (
     <>
       <PageTitle title={t(title)} />

@@ -1,34 +1,39 @@
 export const routes = {
   dashboard: {
-    path: '/',
-    title: 'Dashboard'
+    path: "/",
+    title: "Dashboard"
   },
   login: {
-    path: '/login',
-    title: 'Login'
+    path: "/login",
+    title: "Login"
   },
   register: {
-    path: '/register',
-    title: 'Register'
+    path: "/register",
+    title: "Register"
   },
   resetPassword: {
-    path: '/reset-password',
-    title: 'Reset password'
+    path: "/reset-password",
+    title: "Reset password"
   },
   passwordRecovery: {
-    path: '/password-recovery',
-    title: 'Password recovery'
+    path: "/password-recovery",
+    title: "Password recovery"
   },
   profile: {
-    path: '/profile',
-    title: 'Profile'
+    path: "/profile",
+    title: "Profile"
   },
   readers: {
-    path: '/readers',
-    title: 'Readers'
+    path: "/readers",
+    title: "Readers"
   },
   authors: {
-    path: '/authors',
-    title: 'Authors'
+    path: "/authors",
+    title: "Authors"
+  },
+  book: {
+    path: "/book/:id",
+    url: (id) => `/book/${id}`,
+    title: "Book"
   }
 };

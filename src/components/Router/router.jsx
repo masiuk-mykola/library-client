@@ -12,6 +12,7 @@ import Authors from "@pages/Authors/index.jsx";
 import PasswordRecovery from "@pages/PasswordRecovery/index.jsx";
 import ResetPassword from "@pages/ResetPassword/index.jsx";
 import NotFound from "@pages/NotFound/index.jsx";
+import Book from "@pages/Book/index.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
       {
         path: routes.authors.path,
         element: <Authors title={routes.authors.title} />
+      },
+      {
+        path: routes.book.path,
+        element: <Book title={routes.book.title} />
       }
     ]
   },

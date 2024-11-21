@@ -2,23 +2,24 @@ import PropTypes from "prop-types";
 import React from "react";
 import { StyledDataGrid } from "@components/shared/Table/styled.js";
 
-const Table = ({ data, columns, loading }) => (
-    <div style={{ height: "auto", width: "100%" }}>
-      <StyledDataGrid
-        rows={data || []}
-        columns={columns || []}
-        initialState={{
-          pagination: {
-            paginationModel: {
-              pageSize: 10
-            }
+const Table = ({ data, columns, loading, ...rest }) => (
+  <div style={{ height: "auto", width: "100%" }}>
+    <StyledDataGrid
+      rows={data || []}
+      columns={columns || []}
+      initialState={{
+        pagination: {
+          paginationModel: {
+            pageSize: 10
           }
-        }}
-        pageSizeOptions={[5]}
-        loading={loading}
-      />
-    </div>
-  );
+        }
+      }}
+      pageSizeOptions={[5]}
+      loading={loading}
+      {...rest}
+    />
+  </div>
+);
 
 Table.propTypes = {
   columns: PropTypes.array.isRequired,

@@ -37,6 +37,10 @@ export default defineConfig({
       {
         find: "@store",
         replacement: resolve(root, "store")
+      },
+      {
+        find: "@services",
+        replacement: resolve(root, "services")
       }
     ]
   },

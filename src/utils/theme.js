@@ -219,6 +219,13 @@ export const themeSettings = (mode) => {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontSize: 14
       }
+    },
+    loaderOverlay: `${colors.primary[400]}80`,
+    mixins: {
+      MuiDataGrid: {
+        // Headers, and top & bottom fixed rows
+        containerBackground: colors.primary[400]
+      }
     }
   };
 };

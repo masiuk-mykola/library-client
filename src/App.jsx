@@ -1,17 +1,17 @@
-import { useMode } from "@utils/theme.js";
-import { useLocalStorage } from "@hooks/useLocalStorage.js";
-import { userTokenLSKey } from "@constants/common.js";
-import { useDispatch } from "react-redux";
-import api, { setAuthHeader } from "@utils/api.js";
-import { apiUrls } from "@constants/apiUrls.js";
-import React, { useEffect } from "react";
-import { useQuery } from "@tanstack/react-query";
-import { setProfile } from "@store/authSlice.js";
-import { ThemeProvider } from "@emotion/react";
-import { CssBaseline } from "@mui/material";
-import { RouterProvider } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
-import { router } from "@components/Router/router.jsx";
+import { useMode } from '@utils/theme.js';
+import { useLocalStorage } from '@hooks/useLocalStorage.js';
+import { userTokenLSKey } from '@constants/common.js';
+import { useDispatch } from 'react-redux';
+import api, { setAuthHeader } from '@utils/api.js';
+import { apiUrls } from '@constants/apiUrls.js';
+import React, { useEffect } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { setProfile } from '@store/authSlice.js';
+import { ThemeProvider } from '@emotion/react';
+import { CssBaseline } from '@mui/material';
+import { RouterProvider } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import { router } from '@components/Router/router.jsx';
 
 function App() {
   const theme = useMode();
